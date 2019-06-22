@@ -1,0 +1,14 @@
+{
+  "rules": [
+    {
+      "id": 1,
+      "name": "rule-1",
+      "type": "all"
+    },
+    {
+      "id": 2,
+      "name": "rule-2",
+      "type": "any"  
+    }
+  ]
+}

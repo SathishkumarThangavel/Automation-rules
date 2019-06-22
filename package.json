@@ -14,7 +14,8 @@
     "build": "ember build",
     "lint:js": "eslint ./*.js app blueprints config lib server tests",
     "start": "ember serve",
-    "test": "ember test"
+    "test": "ember test",
+    "backend": "node_modules/.bin/json-server db.json"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
@@ -39,6 +40,7 @@
     "ember-source": "~3.1.0",
     "ember-welcome-page": "^3.0.0",
     "eslint-plugin-ember": "^5.0.0",
+    "json-server": "^0.15.0",
     "loader.js": "^4.2.3"
   },
   "engines": {

@@ -1,0 +1,20 @@
+<table>
+  <th>
+    <tr>
+      Name
+    </tr>
+    <tr>
+      Type
+    </tr>
+  </th>
+  {{#each model as |rule|}}
+    <td>
+      <tr>
+        {{rule.name}}
+      </tr>
+      <tr>
+        {{rule.type}}
+      </tr>
+    </td>
+  {{/each}}
+</table>

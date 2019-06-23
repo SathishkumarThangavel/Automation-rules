@@ -2,7 +2,7 @@ import Route from '@ember/routing/route';
 
 export default Route.extend({
   model() {
-    return this.ajax.request('rules');
+    return this.ajax.request('rules?_page=1&_limit=10');
   },
   setupController(controller, model) {
     this._super(controller, model);

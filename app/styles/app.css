@@ -9,6 +9,7 @@
 }
 th {
   color: #777;
+  position: relative;
 }
 tr {
   cursor: pointer;
@@ -128,4 +129,36 @@ input:focus {
 }
 .rule-details span {
   margin: 10px 25px;
+}
+
+.sort {
+  position: absolute;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  border-top: 4px solid #000;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  border-bottom: 0 dotted;
+  opacity: 1;
+  content: "";
+}
+.sort .up {
+  margin-bottom: -7px;
+  border-bottom-color: #333;
+  border-bottom: 4px solid #000;
+  border-top: 0;
+  display: block;
+}
+.next-page {
+  width: 12px;
+  height: 12px;
+}
+.pagination {
+  margin: 50px;
 }

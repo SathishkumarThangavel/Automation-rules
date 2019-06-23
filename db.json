@@ -59,6 +59,158 @@
       "type": "all",
       "name": "test-3",
       "id": 3
+    },
+    {
+      "rules": [
+        {
+          "field": "receivedDate",
+          "operator": "less than months",
+          "value": "2"
+        }
+      ],
+      "actions": [
+        {
+          "value": "mark as read"
+        }
+      ],
+      "type": "any",
+      "name": "rule-4",
+      "id": 4
+    },
+    {
+      "rules": [
+        {
+          "field": "message",
+          "operator": "contains",
+          "value": "Dear"
+        }
+      ],
+      "actions": [
+        {
+          "value": "mark as read"
+        }
+      ],
+      "type": "all",
+      "name": "rule-5",
+      "id": 5
+    },
+    {
+      "rules": [
+        {
+          "field": "from",
+          "operator": "contains",
+          "value": "mail"
+        }
+      ],
+      "actions": [
+        {
+          "value": "mark as read"
+        }
+      ],
+      "type": "any",
+      "name": "rule-6",
+      "id": 6
+    },
+    {
+      "rules": [
+        {
+          "field": "from",
+          "operator": "contains",
+          "value": "mail"
+        }
+      ],
+      "actions": [
+        {
+          "value": "Archieve Message"
+        }
+      ],
+      "type": "all",
+      "name": "rule-7",
+      "id": 7
+    },
+    {
+      "rules": [
+        {
+          "field": "from",
+          "operator": "contains",
+          "value": "testmail"
+        }
+      ],
+      "actions": [
+        {
+          "value": "mark as read"
+        }
+      ],
+      "type": "all",
+      "name": "rule-8",
+      "id": 8
+    },
+    {
+      "rules": [
+        {
+          "field": "receivedDate",
+          "operator": "contains",
+          "value": "10"
+        }
+      ],
+      "actions": [
+        {
+          "value": "mark as read"
+        }
+      ],
+      "type": "any",
+      "name": "rule-9",
+      "id": 9
+    },
+    {
+      "rules": [
+        {
+          "field": "message",
+          "operator": "contains",
+          "value": "dear"
+        }
+      ],
+      "actions": [
+        {
+          "value": "Any Label"
+        }
+      ],
+      "type": "all",
+      "name": "rule-10",
+      "id": 10
+    },
+    {
+      "rules": [
+        {
+          "field": "from",
+          "operator": "equals"
+        }
+      ],
+      "actions": [
+        {
+          "value": "mark as read"
+        }
+      ],
+      "type": "all",
+      "name": "rule-11",
+      "id": 11
+    },
+    {
+      "rules": [
+        {
+          "field": "receivedDate",
+          "operator": "greater than months",
+          "value": "1"
+        }
+      ],
+      "actions": [
+        {
+          "value": "mark as read"
+        }
+      ],
+      "type": "any",
+      "name": "rule-12",
+      "id": 12
     }
   ]
 }

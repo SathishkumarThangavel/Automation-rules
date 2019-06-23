@@ -1,0 +1,11 @@
+<div class="pagination clearfix">
+  {{#if showPagination}}
+    <div style="text-align:right">
+        <span data-test-title="list-range">{{rangeText}}</span>
+      <a data-test-title="next-page" class="{{unless showNext 'disabled'}}" {{action 'refreshList' (increment page)}}>
+        <small>{{svg-jar "next" class="next-page"}}</small>
+      </a>
+    </div>
+  {{/if}}
+
+</div>

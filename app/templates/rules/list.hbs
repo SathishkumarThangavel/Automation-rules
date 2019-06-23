@@ -3,8 +3,15 @@
 <table class="container-centered">
   <thead>
     <tr>
-      <th style="width:12%" class="text-left">
+      <th style="width:12%" class="text-left" {{action 'sort'}}>
         NAME
+        <span class="sort">
+          {{#if (equal sortOrder 'asc')}}
+            <b class="caret up"></b>
+          {{else if (equal sortOrder 'desc')}}
+            <b class="caret down"></b>
+          {{/if}}
+        </span>
       </th>
       <th style="width:12%" class="text-left">
         TYPE
@@ -32,4 +39,4 @@
     {{/each}}
   </tbody>
 </table>
-{{outlet}}
+{{pagination-bar content=list page=page refreshList=(action 'refreshList')}}

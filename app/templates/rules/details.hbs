@@ -1,1 +1,39 @@
-{{outlet}}
+<section class="topband">
+  <div class="container-centered">
+    <span>Rule Details</span>
+    </div>
+</section>
+<div style="margin: 30px 70px">
+  {{#link-to 'rules.list'}}
+      {{"< Back"}}
+  {{/link-to}}
+</div>
+<section class="container-centered" style="margin-top: 50px;">
+  <div class="details-group">
+    <label>Name</label>
+    <span>{{model.name}}</span>
+  </div>
+  <div class="details-group">
+    <label>Type</label>
+    <span>{{model.type}}</span>
+  </div>
+  <h3 style="margin-left:50px;margin-top:30px;">Rules</h3>
+  {{#each model.rules as |ruleItem index|}}
+    <div class="rule-details">
+      <span>{{increment index}}</span>
+      <span>{{ruleItem.field}}</span>
+      <span>{{ruleItem.operator}}</span>
+      <span>{{ruleItem.value}}</span>
+    </div>
+  {{/each}}
+  <h3 style="margin-left:50px;margin-top:30px;">Actions</h3>
+  {{#each model.actions as |actionItem|}}
+  <div class="rule-details">
+    <span>{{actionItem.value}}</span>
+  </div>
+  {{/each}}
+  <div style="margin:50px;">
+    <button {{action send "editItem" model}}>Edit</button>
+    <button {{action send "deleteItem" model}} class="delete">Delete</button>
+  </div>
+</section>

@@ -1,14 +1,26 @@
 {
   "rules": [
     {
-      "id": 1,
       "name": "rule-1",
-      "type": "all"
-    },
-    {
-      "id": 2,
-      "name": "rule-2",
-      "type": "any"  
+      "type": "all",
+      "rules": [
+        {
+          "field": "from",
+          "operator": "contains",
+          "value": "john"
+        },
+        {
+          "field": "to",
+          "operator": "contains",
+          "value": "mail"
+        }
+      ],
+      "actions": [
+        {
+          "value": "Archieve Message"
+        }
+      ],
+      "id": 1
     }
   ]
 }

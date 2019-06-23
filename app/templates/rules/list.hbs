@@ -1,0 +1,35 @@
+{{top-band}}
+{{search-band searchRules=(action "searchRules")}}
+<table class="container-centered">
+  <thead>
+    <tr>
+      <th style="width:12%" class="text-left">
+        NAME
+      </th>
+      <th style="width:12%" class="text-left">
+        TYPE
+      </th>
+      <th style="width:20%" class="text-left">
+        ACTIONS
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each list as |rule|}}
+      {{#rule-item content=rule as |ruleItem|}}
+        <tr {{action send "rowAction" rule}}>
+          <td style="width:12%">
+            {{rule.name}}
+          </td>
+          <td style="width:12%">
+            {{rule.type}}
+          </td>
+          <td style="width:20%">
+            {{ruleItem.actionStr}}
+          </td>
+        </tr>
+      {{/rule-item}}
+    {{/each}}
+  </tbody>
+</table>
+{{outlet}}

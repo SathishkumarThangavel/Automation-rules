@@ -1,0 +1,131 @@
+:root {
+  font-family: sans-serif;
+}
+.topband {
+  box-shadow: 0px 1px #eee;
+  padding: 50px 10px;
+  background-color: #FAFAFA;
+  font-size: 32px;
+}
+th {
+  color: #777;
+}
+tr {
+  cursor: pointer;
+}
+th,td {
+  padding: 20px 30px;
+  border-bottom: 1px solid #EDEDED;
+}
+.container-centered {
+  max-width: 1028px;
+  margin:auto;
+}
+.text-left {
+  text-align: left;
+}
+button {
+  padding: 10px 20px;
+  background-color: #453e70;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+.icons {
+  width: 10px;
+  height: 10px;
+  fill: #fff;
+}
+.plus-circled {
+  width: 14px;
+  height: 14px;
+  fill: #eb9388;
+}
+/* Form */
+form.container-centered {
+  margin-top: 100px;
+  max-width: 900px;
+}
+.form-group {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 25px;
+}
+.form-group label {
+  flex: 1;
+  padding: .5em 1em .5em 0;
+}
+.form-group input, .form-group select  {
+  flex: 2;
+  padding: .5em;
+}
+
+/* Rules */
+
+.rules-group {
+  display: flex;
+}
+.rules-criteria select, .rules-criteria input, .rules-criteria span {
+  margin: 10px 50px;
+}
+.rules-criteria svg {
+  cursor: pointer;
+  margin: 0 5px;
+}
+.new-criteria {
+  cursor: pointer;
+  margin:20px 50px 40px;
+  color: #428bca;
+  font-size: 14px;
+}
+.secondary-btn {
+  background-color: #a2a1a1;
+  margin-left: 10px;
+}
+.delete {
+  background-color: #b93a25;
+  margin-left: 10px;
+}
+.err-msg-banner {
+  width: 100%;
+  padding: 10px 50px;
+  background-color: #ffecec;
+  border-color: #ffdde2;
+  color: #b94a48;
+}
+.close {
+  float: right;
+  cursor: pointer;
+}
+
+/* search band */
+
+.search-band {
+  max-width: 900px;
+  margin: 40px auto 40px;
+}
+.search-band input {
+  width: 200px;
+  padding: 10px 11px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+input:focus {
+  outline: none;
+  border: 1px solid #428bca;
+}
+/* Details section */
+.details-group {
+  margin-left: 50px;
+  font-size: 17px;
+  margin-bottom: 20px
+}
+.details-group label {
+  margin-right: 50px;
+}
+.rule-details {
+  margin-left: 50px;
+}
+.rule-details span {
+  margin: 10px 25px;
+}

@@ -1,17 +1,16 @@
 import Route from '@ember/routing/route';
-import EmberObject from '@ember/object';
 
 export default Route.extend({
   model() {
-    return EmberObject.create({rules: []});
+    return this.ajax.request('rules');
   },
   setupController(controller, model) {
     this._super(controller, model);
-    controller.loadData();
+    controller.set('list', model);
   },
   actions: {
-    goToList() {
-      this.transitionTo('rules.list');
+    rowAction(row) {
+      this.transitionTo('rules.details', row.id);
     }
   }
 

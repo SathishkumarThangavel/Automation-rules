@@ -8,9 +8,10 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('rules', function() {
-    this.route('details');
+    this.route('details', {path: '/:id'});
     this.route('new');
-    this.route('edit');
+    this.route('edit', {path: '/:id/edit'});
+    this.route('list', {path: '/'});
   });
 });
 

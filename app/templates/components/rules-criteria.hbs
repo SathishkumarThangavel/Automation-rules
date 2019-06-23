@@ -1,0 +1,26 @@
+  <span>{{increment index}}</span>
+  {{#x-select value=rule.field action=(action "selectOption" "rule.field") as |xs|}}
+    {{#xs.option value="from"}}From{{/xs.option}}
+    {{#xs.option value="to"}}To{{/xs.option}}
+    {{#xs.option value="subject"}}Subject{{/xs.option}}
+    {{#xs.option value="message"}}Message{{/xs.option}}
+    {{#xs.option value="receivedDate"}}Received Data/Time{{/xs.option}}
+  {{/x-select}}
+  {{#if isDateField}}
+    {{#x-select value=rule.operator action=(action "selectOption" "rule.operator") as |xs|}}
+      {{#xs.option value="less than days"}}Less than days{{/xs.option}}
+      {{#xs.option value="greater than"}}Greater than days{{/xs.option}}
+      {{#xs.option value="less than months"}}Less than months{{/xs.option}}
+      {{#xs.option value="greater than months"}}Greater than months{{/xs.option}}
+    {{/x-select}}
+    {{input type="number" value=rule.value}}
+    {{else}}
+      {{#x-select value=rule.operator action=(action "selectOption" "rule.operator") as |xs|}}
+        {{#xs.option value="contains"}}Contains{{/xs.option}}
+        {{#xs.option value="does not contain"}}Does not Contain{{/xs.option}}
+        {{#xs.option value="equals"}}Equals{{/xs.option}}
+        {{#xs.option value="does not equal"}}Does not equal{{/xs.option}}
+      {{/x-select}}
+      {{input value=rule.value}}
+  {{/if}}
+  <a{{action 'removeRulesRow' this}}>{{svg-jar "minus-circled" class="plus-circled"}}</a>

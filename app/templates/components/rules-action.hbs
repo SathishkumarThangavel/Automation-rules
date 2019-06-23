@@ -1,0 +1,6 @@
+{{#x-select value=action.value action=(action "selectOption" "action.value") as |xs|}}
+  {{#xs.option value="Mark As Read"}}Mark As Read{{/xs.option}}
+  {{#xs.option value="Archieve Message"}}Archieve Message{{/xs.option}}
+  {{#xs.option value="Any Label"}}Any Label{{/xs.option}}
+{{/x-select}}
+<a{{action 'removeActionsRow' this}}>{{svg-jar "minus-circled" class="plus-circled"}}</a>

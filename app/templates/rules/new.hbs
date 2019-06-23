@@ -1,1 +1,50 @@
-{{outlet}}
+<section class="topband">
+  <div class="container-centered">
+    <span>Rules Creation</span>
+    </div>
+</section>
+<form class="container-centered">
+  {{#if errMsg}}
+    <div class="form-group">
+      <ul class="err-msg-banner">
+        <div class="close" {{action "closeErrBanner"}}>x</div>
+        {{#each errMsg as |msg|}}
+          <li style="padding: 5px">{{msg}}</li>
+        {{/each}}
+      </ul>
+    </div>
+  {{/if}}
+  <div class="form-group">
+    <label>Name</label>
+    {{input value=model.name}}
+  </div>
+  <div class="form-group">
+    <label>Type</label>
+    {{#x-select value=model.type action=(action "selectOption" "model.type") as |xs|}}
+      {{#xs.option value=""}}Select{{/xs.option}}
+      {{#xs.option value="all"}}All{{/xs.option}}
+      {{#xs.option value="any"}}Any{{/xs.option}}
+    {{/x-select}}
+  </div>
+  <div>
+    <h3>Rules</h3>
+  </div>
+  <div>
+    {{#each model.rules as |rule index|}}
+      {{rules-criteria rule=rule index=index removeRulesRow=(action "removeRulesRow")}}
+    {{/each}}
+    <div class="new-criteria"><a {{action 'addRulesRow'}}>+ New Criteria</a></div>
+  </div>
+  <div>
+    <h3>Actions</h3>
+  </div>
+  <div>
+    {{#each model.actions as |action index|}}
+      {{rules-action action=action index=index removeActionsRow=(action "removeActionsRow")}}
+    {{/each}}
+    <div class="new-criteria"><a {{action 'addActionRow'}}>+ Add Action</a></div>
+  </div>
+  <br>
+  <button {{action "saveRecord"}}> Save</button>
+  <button class="secondary-btn" {{action send "goToList"}}>Cancel</button>
+</form>

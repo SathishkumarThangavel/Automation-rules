@@ -3,15 +3,6 @@ import { isEmpty, isPresent } from '@ember/utils';
 import ajaxService from 'automation-rules/utils/send-request';
 
 export default Controller.extend({
-  errMsg: null,
-
-  loadData() {
-    let rules = [];
-    let actions = [];
-    rules.push({field: 'from'});
-    actions.push({value:'mark as read'});
-    this.model.setProperties({rules,actions});
-  },
   actions: {
     selectOption(key,value) {
       this.set(key, value);
@@ -50,13 +41,14 @@ export default Controller.extend({
         return;
       }
       // TODO: Needs to implement serialize method to avoid sending unintended param
+      let url = `rules/${model.id}`;
       let params = {
         data: JSON.stringify(model),
         dataType: 'json',
         contentType: 'application/json;charset=UTF-8',
-        method: 'POST'
+        method: 'PUT'
       }
-      ajaxService('rules', params).then(() => {
+      ajaxService(url, params).then(() => {
         this.send('goToList');
       }).catch(()=>{
         this.set('errMsg', 'something wrong try again!')

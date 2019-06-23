@@ -1,26 +1,64 @@
 {
   "rules": [
     {
-      "name": "rule-1",
-      "type": "all",
       "rules": [
         {
           "field": "from",
           "operator": "contains",
-          "value": "john"
-        },
-        {
-          "field": "to",
-          "operator": "contains",
-          "value": "mail"
+          "value": "ok"
         }
       ],
       "actions": [
         {
+          "value": "mark as read"
+        },
+        {
           "value": "Archieve Message"
         }
       ],
+      "type": "any",
+      "name": "test-1",
       "id": 1
+    },
+    {
+      "rules": [
+        {
+          "field": "subject",
+          "operator": "contains",
+          "value": "forward"
+        }
+      ],
+      "actions": [
+        {
+          "value": "mark as read"
+        },
+        {
+          "value": "Archieve Message"
+        },
+        {
+          "value": "Any Label"
+        }
+      ],
+      "type": "any",
+      "name": "test-2",
+      "id": 2
+    },
+    {
+      "rules": [
+        {
+          "field": "from",
+          "operator": "contains",
+          "value": "jack"
+        }
+      ],
+      "actions": [
+        {
+          "value": "mark as read"
+        }
+      ],
+      "type": "all",
+      "name": "test-3",
+      "id": 3
     }
   ]
 }

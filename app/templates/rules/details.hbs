@@ -7,6 +7,7 @@
   {{#link-to 'rules.list'}}
       {{"< Back"}}
   {{/link-to}}
+  <button {{action send "deleteItem" model}} class="delete" style="float:right">Delete</button>
 </div>
 <section class="container-centered" style="margin-top: 50px;">
   <div class="details-group">
@@ -34,6 +35,5 @@
   {{/each}}
   <div style="margin:50px;">
     <button {{action send "editItem" model}}>Edit</button>
-    <button {{action send "deleteItem" model}} class="delete">Delete</button>
   </div>
 </section>
